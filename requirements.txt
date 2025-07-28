@@ -1,0 +1,63 @@
+# =============================================================================
+# REQUIREMENTS.TXT - Federated Learning Comparison Study
+# =============================================================================
+
+# Core Data Science Libraries
+numpy>=1.21.0,<2.0.0
+pandas>=1.3.0,<3.0.0
+matplotlib>=3.5.0,<4.0.0
+seaborn>=0.11.0,<0.13.0
+
+# Machine Learning Libraries
+scikit-learn>=1.0.0,<1.5.0
+scipy>=1.7.0,<2.0.0
+
+# Deep Learning Framework
+torch>=1.11.0,<3.0.0
+torchvision>=0.12.0,<1.0.0
+
+# Federated Learning Framework
+flwr[simulation]>=1.4.0
+# Distributed Computing (Ray - used by Flower simulation)
+ray>=2.0.0
+
+# Optional: Jupyter Notebook Support (if running in notebooks)
+jupyter>=1.0.0
+ipykernel>=6.0.0
+ipywidgets>=7.6.0
+
+# =============================================================================
+# INSTALLATION INSTRUCTIONS
+# =============================================================================
+
+# To install all dependencies, run:
+# pip install -r requirements.txt
+
+# For CUDA support (if you have a compatible GPU):
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+
+# For Google Colab compatibility, some packages may already be installed
+# You can install missing ones with:
+# !pip install -r requirements.txt
+
+# =============================================================================
+# COMPATIBILITY NOTES
+# =============================================================================
+
+# Python Version: >= 3.8, < 3.12 (recommended: 3.9 or 3.10)
+# Operating System: Windows, macOS, Linux
+# Memory: At least 4GB RAM recommended for 20-fold cross-validation
+# Storage: ~500MB for dependencies, ~100MB for result files
+
+# For Apple Silicon Macs (M1/M2), you may need:
+# conda install pytorch torchvision -c pytorch
+
+# =============================================================================
+# DEVELOPMENT/OPTIONAL PACKAGES
+# =============================================================================
+
+# Uncomment these if you want additional development tools:
+# black>=22.0.0          # Code formatting
+# flake8>=4.0.0          # Code linting  
+# pytest>=7.0.0          # Testing framework
+# jupyter-lab>=3.0.0     # Enhanced Jupyter interface
